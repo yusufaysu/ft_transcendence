@@ -1,0 +1,90 @@
+.historyDiv {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgba(153, 153, 153, 0.350)
+}
+
+.skoreBox {
+    flex: 1;
+    border: solid;
+    border-radius: 4px;
+    border-width: 2px;
+    text-align: center;
+    margin: 1px;
+    font-size: 1.6em;
+}
+
+.historyRivalImg {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.historyRivalImg:hover {
+    padding: 2px;
+    height: 96px;
+    width: 96px;
+    opacity: 0.5;
+}
+
+.historyViewList{
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    height: 80vh;
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-right: 10px;
+}
+
+.gameHistoryTextTabDiv {
+    flex: 1;
+    text-align: center;
+    font-size: 2.0em;
+    min-width: 350px;
+}
+
+.gameHistoryImgTabDiv {
+    width: 40px;
+    height: 40px;
+}
+
+.gameHistoryTextTabDiv, .gameHistoryImgTabDiv {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 360px;
+    background-color: rgb(195, 229, 248);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.gameHistoryImgTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+    padding: 12px;
+    width: 36px;
+    height: 36px;
+}
+
+.gameHistoryTextTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+}
+
+.gameHistoryTextTabDiv:active, .gameHistoryImgTabDiv:active {
+    opacity: 0.5;
+}
+
+.gameHistoryTabsDiv {
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+    margin-top: 10px;
+}

@@ -1,0 +1,80 @@
+.rankTextTabDiv {
+    flex: 1;
+    text-align: center;
+    font-size: 2.0em;
+    min-width: 350px;
+}
+
+.rankImgTabDiv {
+    width: 40px;
+    height: 40px;
+}
+
+.rankTextTabDiv, .rankImgTabDiv {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 360px;
+    background-color: rgb(195, 229, 248);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.rankImgTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+    padding: 12px;
+    width: 36px;
+    height: 36px;
+}
+
+.rankTextTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+}
+
+.rankTextTabDiv:active, .rankImgTabDiv:active {
+    opacity: 0.5;
+}
+
+.rankViewDiv {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(153, 153, 153, 0.350);
+    padding: 20px;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 15px
+}
+
+.rankViewUserInfoDiv {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 10px;
+    margin-top: 10px
+}
+
+.rankViewListDiv {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    height: 80vh;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    padding-right: 15px
+}
+
+.globalRankUserImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.globalRankUserImg:hover {
+    padding: 2px;
+    width: 96px;
+    height: 96px;
+    opacity: 0.5;
+}

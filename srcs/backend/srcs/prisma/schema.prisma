@@ -1,0 +1,178 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  firstLogin  Boolean @default(true)
+  displayname String
+  email       String @unique
+  nickname    String @unique
+  photoUrl    String
+
+  twoFactorEnabled Boolean @default(false)
+  twoFactorSecret  String?
+  twoFactorQrCode  String?
+
+  totalGame  Int   @default(0)
+  totalWin   Int   @default(0)
+  xp         Int   @default(0)
+
+  chatRoomIds String[]
+  friendIds   Int[]
+  blockedUserIds Int[]
+
+  sentFriendRequests     FriendRequest[] @relation("SentRequest")
+  receivedFriendRequests FriendRequest[] @relation("ReceivedRequest")
+
+  sentChatRequests       PrivateChatRequest[] @relation("SentChatRequest")
+  receivedChatRequests   PrivateChatRequest[] @relation("ReceivedChatRequest")
+
+  currentGameId String @default("")
+  gameHistoryAsPlayerOne GameHistory[] @relation("PlayerOne")
+  gameHistoryAsPlayerTwo GameHistory[] @relation("PlayerTwo")
+
+  achievements UserAchievement[]
+  pongShapeStyle Int @default(0)
+  pongColorStyle Int @default(0)
+}
+
+model Chatroom {
+  id         String        @id @default(cuid())
+  name       String
+  ownerId    Int
+  roomStatus RoomStatus
+  password   String?
+
+  userCount  Int @default(1)
+  adminIds   Int[]
+  muteList   MuteObject[] @relation("MuteList")
+  banList    BanObject[] @relation("BanList")
+
+  messages Message[] @relation("Messages")
+}
+
+model MuteObject {
+  id  Int @id @default(autoincrement())
+
+  userId Int
+  expireDate BigInt
+
+  chatroom   Chatroom @relation("MuteList", fields: [chatroomId], references: [id])
+  chatroomId String
+}
+
+model BanObject {
+  id  Int @id @default(autoincrement())
+  
+  userId Int
+  userDisplayname String
+  userNickname String
+  createdAt DateTime @default(now())
+  
+  chatroom   Chatroom @relation("BanList", fields: [chatroomId], references: [id])
+  chatroomId String
+}
+
+model Message {
+  id Int @id @default(autoincrement())
+
+  userId    Int
+  userDisplayname String
+  createdAt DateTime @default(now())
+  data      String
+
+  chatroom   Chatroom @relation("Messages", fields: [chatroomId], references: [id])
+  chatroomId String
+}
+
+model Game {
+  id          String @id @default(cuid())
+  createdAt   DateTime @default(now())
+  playerOneId Int
+  playerTwoId Int
+}
+
+model Session {
+  id        String   @id
+  sid       String   @unique
+  data      String
+  expiresAt DateTime
+}
+
+model GameHistory {
+  id              Int     @id @default(autoincrement())
+  createdAt       DateTime @default(now())
+  playerOne       User    @relation("PlayerOne", fields: [playerOneId], references: [id])
+  playerOneId     Int
+  playerTwo       User    @relation("PlayerTwo", fields: [playerTwoId], references: [id])
+  playerTwoId     Int
+  winnerId        Int
+  playerOneScore  Int
+  playerTwoScore  Int
+}
+
+model FriendRequest {
+  sender           User   @relation("SentRequest", fields: [senderId], references: [id])
+  senderId         Int
+  receiver         User   @relation("ReceivedRequest", fields: [receiverId], references: [id])
+  receiverId       Int
+  uniqueIdentifier String @unique
+
+  @@id([senderId, receiverId])
+}
+
+model PrivateChatRequest {
+  sender            User   @relation("SentChatRequest", fields: [senderId], references: [id])
+  senderId          Int
+  senderName String
+  receiver          User   @relation("ReceivedChatRequest", fields: [receiverId], references: [id])
+  receiverId        Int
+  chatRoomId        String
+  chatRoomName      String
+
+  @@id([receiverId, chatRoomId])
+}
+
+model Achievement {
+  id            Int @id @default(autoincrement())
+  name          String @unique
+  description   String?
+  xp            Int
+  users         UserAchievement[]
+}
+
+model UserAchievement {
+  id            Int @id @default(autoincrement())
+  user          User @relation(fields: [userId], references: [id])
+  userId        Int
+  achievement   Achievement @relation(fields: [achievementName], references: [name])
+  achievementName String
+
+  @@unique([userId, achievementName])
+}
+
+enum RoomStatus {
+  PRIVATE
+  PUBLIC
+  PROTECTED
+}
+
+model DirectMessage {
+  id                  Int @id @default(autoincrement())
+  data                String
+  senderId            Int
+  createdAt           DateTime  @default(now())
+  uniqueIdentifier    String
+}

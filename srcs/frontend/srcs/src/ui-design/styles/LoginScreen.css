@@ -1,0 +1,46 @@
+.loginCenterDiv {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginHeader {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3.5em;
+}
+
+.loginLogo, .loginButton {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.loginLogo {
+    width: 400px;
+}
+
+.loginButton {
+    margin-top:50px;
+    width: 250px;
+    height: 70px;
+    border-radius: 35px;
+    border-width: 2px;
+    background-color: rgb(195, 229, 248);
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.loginButton:hover {
+    background-color: rgb(229, 248, 195);
+}
+
+body {
+    margin: 0px;
+    background: linear-gradient(lightgray, skyblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

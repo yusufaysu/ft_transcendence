@@ -1,0 +1,115 @@
+.directMessageBackImg {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.directMessageUserImg {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 35px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.directMessageUserImg:hover {
+    opacity: 0.5;
+    padding: 2px;
+    height: 66px;
+    width: 66px;
+}
+
+.directMessageBackImg:hover {
+    padding: 22px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+}
+
+.directMessageBlockImg {
+    margin-right: 50px;
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.directMessageBlockImg:hover {
+    width: 26px;
+    height: 26px;
+    padding: 2px;
+    opacity: 0.5;
+}
+
+.directMessagesRoot {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background-color: rgba(60, 60, 60, 0.25);
+}
+
+.directMessageLowerBar {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.directMessageSendAndGameImg {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.directMessageSendAndGameImg:hover {
+    opacity: 0.5;
+    width: 56px;
+    height: 56px;
+    margin-right: 22px;
+    margin-left: 22px;
+}
+
+.directMessageRejectImg {
+    width: 40px;
+    height: 40px;
+    margin-right: 35px;
+    transition: 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.directMessageAcceptImg {
+    width: 40px;
+    height: 40px;
+    margin-left: 35px;
+    transition: 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.directMessageRejectImg:hover, .directMessageAcceptImg:hover {
+    padding: 2px;
+    width: 36px;
+    height: 36px;
+    opacity: 0.5;
+    background-color: rgb(242, 242, 242);
+}
+
+.direcMessageGameInviteView {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    justify-content: center
+}

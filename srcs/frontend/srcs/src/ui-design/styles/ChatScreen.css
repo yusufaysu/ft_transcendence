@@ -1,0 +1,294 @@
+.chatScreenBackImg {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.chatScreenBackImg:hover {
+    padding: 22px;
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+}
+
+.chatScreenTopBarImgs {
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.chatScreenTopBarImgs:hover {
+    width: 26px;
+    height: 26px;
+    padding: 2px;
+    opacity: 0.5;
+}
+
+.chatMessagesRoot {
+    display: flex;
+    flex-direction: column;
+    flex: 12;
+    background-color: rgba(60, 60, 60, 0.25);
+}
+
+.membersListBraceDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(173,173,173);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 1.6em;
+    border-radius: 10px;
+}
+
+.chatScreenInput {
+    width: 800px;
+    height: 55px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.5em;
+    color: whitesmoke;
+    background-color: rgb(60,60,60);
+}
+
+.chatScreenInput::-webkit-input-placeholder {
+    color: whitesmoke;
+}
+
+.chatScreenLowerBar {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.memberListDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.memberListDiv:hover {
+    background-color: rgba(173, 173, 173, 0.350);
+}
+
+.chatMenuDiv {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    position: absolute;
+    background-color: rgba(211, 211, 211, 0.85);
+    border-radius: 6px;
+}
+
+.chatMenuListDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.5s;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.chatMenuListDiv:hover {
+    background-color: rgb(173,173,173);
+}
+
+.chatMenuListDiv:active {
+    opacity: 0.5;
+}
+
+.chatSettingsCenterDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.chatSettingsSelectDiv {
+    font-size: 1.3em;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    height: 35px;
+}
+
+.chatSettingsInput {
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 1.2em;
+    border-style: none;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.chatSettingsNextImg {
+    width: 60px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.chatSettingsNextImg:hover{
+    opacity: 0.5;
+    padding: 2px;
+    width: 56px;
+}
+
+.chatScreenSendImg {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.chatScreenSendImg:hover {
+    opacity: 0.5;
+    width: 56px;
+    height: 56px;
+    margin-right: 22px;
+    margin-left: 22px;
+}
+
+.chatScreenMessageDiv {
+    display: inline-block;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    border-radius: 25px;
+}
+
+.chatAllBanListCenterDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.chatAddMemberCenterDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 90vh;
+}
+
+.chatAllBanListHeaderDiv {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.6em;
+    background-color: lightsteelblue;
+    border-radius: 10px;
+}
+
+.chatAllBanListHeaderListDiv {
+    flex: 1;
+    border: solid;
+    border-width: 1px;
+    padding: 10px;
+    width: 175px;
+}
+
+.chatAllBanListScrollDiv {
+    height: 200px;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.chatAllBanListUsersDiv {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.chatAllBanListUserListDiv, .chatAllBanListUnBanButton {
+    flex: 1;
+    border: solid;
+    border-width: 1px;
+    padding: 4px;
+    width: 175px;
+}
+
+.chatAllBanListUnBanButton {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.0em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.chatAllBanListUnBanButton:hover {
+    background-color: rgba(128, 128, 128, 0.705);
+}
+
+.chatGameInviteRejectImg {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    margin-left: auto;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.chatGameInviteAcceptImg {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.chatGameInviteAcceptImg:hover, .chatGameInviteRejectImg:hover {
+    padding: 2px;
+    width: 31px;
+    height: 31px;
+    opacity: 0.5;
+    background-color: rgb(242, 242, 242);
+}

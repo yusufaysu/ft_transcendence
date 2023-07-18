@@ -1,0 +1,105 @@
+.previewDiv {
+    height: 260px;
+    width: 265px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+}
+
+.previewProfileImg {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    object-fit: cover;
+}
+
+.selectImgButton {
+    background-image: url("../../ui-design/images/add-image.png");
+    background-size: cover;
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    margin-left: -30px;
+    margin-bottom: -10px;
+    transition: 0.5;
+    cursor: pointer;
+}
+
+.selectImgButton:hover {
+    opacity: 0.5;
+}
+
+.hideInputView {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    opacity: 0;
+}
+
+.warningMessage {
+    color: red;
+    font-size: 1.6em;
+    text-align: center;
+    width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+.avatarScroolDiv {
+    width: 700px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+.avatarImgs {
+    height: 100px;
+    width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.5;
+}
+
+.avatarImgs:hover {
+    opacity: 0.5;
+}
+
+.inputBox {
+    width: 350px;
+    height: 50px;
+    border-radius: 360px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 1.2em;
+    border-style: none;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.editProfileSaveButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    height: 60px;
+    width: 170px;
+    margin-top: 50px;
+    border-width: 2px;
+    background-color: rgb(195, 229, 248);
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.editProfileSaveButton:hover {
+    background-color: rgb(229, 248, 195);
+}

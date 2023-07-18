@@ -1,0 +1,63 @@
+.homeAvatarImg {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    object-fit: cover;
+}
+
+.editProfileButton {
+    height: 30px;
+    width: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.editProfileButton:hover {
+    opacity: 0.5;
+    padding: 2;
+    height: 26px;
+    width: 26px;
+}
+
+.textTabDiv {
+    flex: 1;
+    text-align: center;
+    font-size: 2.0em;
+    min-width: 350px;
+}
+
+.imgTabDiv {
+    width: 40px;
+    height: 40px;
+}
+
+.textTabDiv, .imgTabDiv {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 360px;
+    background-color: rgb(195, 229, 248);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.imgTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+    padding: 12px;
+    width: 36px;
+    height: 36px;
+}
+
+.textTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+}
+
+.textTabDiv:active, .imgTabDiv:active {
+    opacity: 0.5;
+}
+
+.roomsDiv {
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}

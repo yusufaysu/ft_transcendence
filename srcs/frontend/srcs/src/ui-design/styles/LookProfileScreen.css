@@ -1,0 +1,66 @@
+.lookProfileAvatarImg {
+    margin-top: 10px;
+    margin-left: -10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    object-fit: cover;
+}
+
+.lookProfileTextTabDiv {
+    flex: 1;
+    text-align: center;
+    font-size: 2.0em;
+    min-width: 350px;
+}
+
+.lookProfileImgTabDiv {
+    width: 40px;
+    height: 40px;
+}
+
+.lookProfileTextTabDiv, .lookProfileImgTabDiv {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 360px;
+    background-color: rgb(195, 229, 248);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.lookProfileImgTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+    padding: 12px;
+    width: 36px;
+    height: 36px;
+}
+
+.lookProfileTextTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+}
+
+.lookProfileTextTabDiv:active, .lookProfileImgTabDiv:active {
+    opacity: 0.5;
+}
+
+.lookProfileHistoryHeader {
+    background-color: lightgrey;
+    border-radius: 25px;
+    text-align: center;
+    padding: 12px;
+    min-width: 350px;
+    font-size: 2.0em;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.lookProfileHistoryViewList {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    height: 55vh;
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-right: 10px;
+}

@@ -1,0 +1,72 @@
+.achievementsTextTabDiv {
+    flex: 1;
+    text-align: center;
+    font-size: 2.0em;
+    min-width: 350px;
+}
+
+.achievementsImgTabDiv {
+    width: 40px;
+    height: 40px;
+}
+
+.achievementsTextTabDiv, .achievementsImgTabDiv {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 360px;
+    background-color: rgb(195, 229, 248);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.achievementsImgTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+    padding: 12px;
+    width: 36px;
+    height: 36px;
+}
+
+.achievementsTextTabDiv:hover {
+    background-color: rgb(129, 205, 249);
+}
+
+.achievementsTextTabDiv:active, .achievementsImgTabDiv:active {
+    opacity: 0.5;
+}
+
+.achievementsViewDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(153, 153, 153, 0.350);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.achievementsHeaderDiv {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 10px;
+}
+
+.achievementsHeaderRowDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.achievementsListDiv {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-right: 200px;
+    overflow-x: auto;
+    height: 70vh;
+    margin-top: 75px;
+    padding-right: 10px
+}
